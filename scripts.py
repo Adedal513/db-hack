@@ -30,7 +30,7 @@ def create_commendation(student: str, subject_title: str) -> bool:
         subject__title=subject_title
     )
 
-    if student_target_lessons.count():
+    if student_target_lessons:
         commendation_lesson = random.choice(student_target_lessons)
         commendation_text = random.choice(possible_commendations)
 
